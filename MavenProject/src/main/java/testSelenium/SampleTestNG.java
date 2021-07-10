@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import baseClasses.SeleniumBaseClass;
 
-//@Listeners(testSelenium.TestListeners.class)	
+@Listeners(testSelenium.TestListeners.class)	
 
 public class SampleTestNG extends SeleniumBaseClass{
 
