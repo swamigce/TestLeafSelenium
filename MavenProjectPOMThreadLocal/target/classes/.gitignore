@@ -1,6 +1,5 @@
-/POMTests/
 /baseClasses/
 /pagesPOM/
-/testSelenium/
-/threadLocal/
-/utilitypackage/
+/POMTests/
+/cucumberFeatures/
+/cucumberRunner/

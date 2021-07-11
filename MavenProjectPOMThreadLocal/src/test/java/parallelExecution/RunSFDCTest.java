@@ -1,4 +1,4 @@
-package runner;
+package parallelExecution;
 
 import org.testng.annotations.DataProvider;
 

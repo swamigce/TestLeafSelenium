@@ -19,8 +19,8 @@ public class AppLauncher extends CucumberBase{
 	@Given ("Click Contact Request link")
 	public void ClickContactReq() {
 		//driver.findElementByXPath("//p[text()='Contact Requests']").click();
-		WebElement eleContactReqLink = driver.findElementByXPath("//p[text()='Contact Requests']");
-		UtilityWrapperMethods.eleClick(driver, eleContactReqLink);
+		WebElement eleContactReqLink = getDriver().findElementByXPath("//p[text()='Contact Requests']");
+		UtilityWrapperMethods.eleClick(getDriver(), eleContactReqLink);
 		//return new ContactRequestDashBoardPage();
 	}
 }

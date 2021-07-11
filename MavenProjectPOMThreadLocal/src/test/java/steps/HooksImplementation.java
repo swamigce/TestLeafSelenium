@@ -19,7 +19,7 @@ public class HooksImplementation extends CucumberBase{
 	//public  RemoteWebDriver driver;
 	public String appURL = "https://login.salesforce.com/";
 	
-	//@Before
+	@Before
 	public void preCondition() {
 		
 		WebDriverManager.chromedriver().setup(); 
@@ -27,16 +27,18 @@ public class HooksImplementation extends CucumberBase{
 		options.addArguments("--disable-notifications");
 		
 		driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(appURL);
+		setUp(driver);
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		getDriver().get(appURL);
+		System.out.println("Hooks Class is running");
 	}
 	
 	
-	//@After
+	@After
 	public void postCondition() {
 		
-		driver.close();
+		getDriver().close();
 	}
 	
 

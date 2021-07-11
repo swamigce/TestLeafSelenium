@@ -1,72 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14782" started-at="2021-07-09T22:40:10 IST" finished-at="2021-07-09T22:40:25 IST">
+  <suite name="Default suite" duration-ms="67880" started-at="2021-07-10T19:04:00 IST" finished-at="2021-07-10T19:05:08 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunSimpleTagsTest@fe18270]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="14782" started-at="2021-07-09T22:40:10 IST" finished-at="2021-07-09T22:40:25 IST">
-      <class name="runner.RunSimpleTagsTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunSimpleTagsTest@fe18270]" name="setUpClass" is-config="true" duration-ms="1478" started-at="2021-07-09T22:40:10 IST" finished-at="2021-07-09T22:40:12 IST">
+    <test name="Default test" duration-ms="67880" started-at="2021-07-10T19:04:00 IST" finished-at="2021-07-10T19:05:08 IST">
+      <class name="cucumberFeatures.TestRunnerAddLocation">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="setUpClass" is-config="true" duration-ms="1890" started-at="2021-07-10T19:04:00 IST" finished-at="2021-07-10T19:04:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunSimpleTagsTest@fe18270]" name="runScenario" duration-ms="555" started-at="2021-07-09T22:40:12 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-09T22:40:12 IST">
+        <test-method status="PASS" signature="setWebDriver()[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="setWebDriver" is-config="true" duration-ms="0" started-at="2021-07-10T19:04:02 IST" finished-at="2021-07-10T19:04:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setWebDriver -->
+        <test-method status="PASS" signature="loginSFDC(java.lang.String, java.lang.String)[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="loginSFDC" is-config="true" duration-ms="27822" started-at="2021-07-10T19:04:02 IST" finished-at="2021-07-10T19:04:30 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["TC1 for Tags"]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Simple Tags Test]"]]>
+                <![CDATA[config]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSFDC -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="runScenario" duration-ms="34450" started-at="2021-07-10T19:04:30 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-10T19:05:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_SFDC Add Location with valid Details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add Location Functionality]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunSimpleTagsTest@fe18270]" name="runScenario" duration-ms="53" started-at="2021-07-09T22:40:12 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-09T22:40:12 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC2 for Tags"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Simple Tags Test]"]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="logoutSFDC()[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="logoutSFDC" is-config="true" duration-ms="1365" started-at="2021-07-10T19:05:04 IST" finished-at="2021-07-10T19:05:06 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunSimpleTagsTest@fe18270]" name="runScenario" duration-ms="43" started-at="2021-07-09T22:40:12 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-09T22:40:12 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC3 for Tags"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Simple Tags Test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunSimpleTagsTest@fe18270]" name="tearDownClass" is-config="true" duration-ms="12575" started-at="2021-07-09T22:40:12 IST" finished-at="2021-07-09T22:40:25 IST">
+        </test-method> <!-- logoutSFDC -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberFeatures.TestRunnerAddLocation@1188e820]" name="tearDownClass" is-config="true" duration-ms="2232" started-at="2021-07-10T19:05:06 IST" finished-at="2021-07-10T19:05:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.RunSimpleTagsTest -->
+      </class> <!-- cucumberFeatures.TestRunnerAddLocation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -21,10 +21,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SeleniumBaseClass {
+public class SeleniumBaseClass extends AbstractTestNGCucumberTests{
 	
+	///////////Below ThreadLocal code is for parallel Execution/////////////
 	//ThreadLocal<EventFiringWebDriver> localDriver = new ThreadLocal<EventFiringWebDriver>();
 	private static final ThreadLocal<RemoteWebDriver> localDriver = new ThreadLocal<RemoteWebDriver>();
 	public void setUp(RemoteWebDriver driver) {

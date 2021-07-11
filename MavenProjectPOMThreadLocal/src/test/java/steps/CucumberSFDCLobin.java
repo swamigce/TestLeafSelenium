@@ -32,13 +32,13 @@ public class CucumberSFDCLobin extends CucumberBase{
 	
 	@Given ("Load SFDC URL")
 	public void loadAppUrl() {
-		driver.get(appURL);
+		getDriver().get(appURL);
 		
 	}
 
 	@Given ("Enter userName as {string}")
 	public void enterUserName(String struserName) {
-		driver.findElementByXPath("//*[@id='username']").sendKeys(struserName);
+		getDriver().findElementByXPath("//*[@id='username']").sendKeys(struserName);
 		
 		
 //		driver.findElementByXPath("//*[@id='username']").sendKeys(userName);
@@ -50,18 +50,18 @@ public class CucumberSFDCLobin extends CucumberBase{
 
 	@Given ("Enter Password as {string}")
 	public void enterPassword(String strPassword) {
-		driver.findElementByXPath("//*[@id='password']").sendKeys(strPassword);
+		getDriver().findElementByXPath("//*[@id='password']").sendKeys(strPassword);
 	}
 	
 	@Given  ("Click Loging button")
 	public void clickLogin() {
-		driver.findElementByXPath("//*[@id='Login']").click();
+		getDriver().findElementByXPath("//*[@id='Login']").click();
 	}
 	
 	@Given ("Validate HomePage")
 	public void verifyHomePage() {
 		System.out.println("SFDC Login success ");
-		WebElement ele = driver.findElementByXPath("//*[contains(@class,'salesforceIdentityAppLauncherHeader')]/div");
+		WebElement ele = getDriver().findElementByXPath("//*[contains(@class,'salesforceIdentityAppLauncherHeader')]/div");
 		if(ele.isDisplayed()) {
 			System.out.println("test case pass");
 		}else System.out.println("Test case failed");
@@ -70,7 +70,7 @@ public class CucumberSFDCLobin extends CucumberBase{
 	@Given ("Validate LoginPage")
 	public void verifyLoginPage() {
 		System.out.println("SFDC negative TC ");
-		WebElement ele = driver.findElementByXPath("//*[@id='Login']");
+		WebElement ele = getDriver().findElementByXPath("//*[@id='Login']");
 		if(ele.isDisplayed()) {
 			System.out.println("test case pass");
 		}else System.out.println("Test case failed");
