@@ -17,7 +17,8 @@ public class NewLocationPage extends SeleniumBaseClass{
 	@Given("Select Location Type as {string}")
 	public NewLocationPage enterLocationType(String strLT) {
 		getDriver().findElementByXPath("//*[text()='Location Type']/parent::span/following-sibling::*//a").click();
-		getDriver().findElementByXPath("//li/a[text()='"+strLT+"']").click();
+		WebElement ele = getDriver().findElementByXPath("//li/a[text()='"+strLT+"']");
+		UtilityWrapperMethods.eleClick(getDriver(), ele);
 		return this;
 	} 
 	
@@ -35,5 +36,22 @@ public class NewLocationPage extends SeleniumBaseClass{
 		return new NewCreatedLocationPage();
 		//return new ContactRequestDashBoardPage(driver, prop);
 	}
+	
+	@Given("Get Last Modified User")
+	public NewLocationPage getLastModUser() {
+		WebElement eleLastModUserlabel = getDriver().findElementByXPath("//*[text()='Last Modified By']/parent::div/following-sibling::div//span[contains(@class,'OutputText')]");
+		System.out.println("Last Modified by = "+eleLastModUserlabel.getText());
+		return this;
+		
+	}
+	
+	@Given("Get Last modifies Date and Time")
+	public NewLocationPage getLastModDateTime() {
+		WebElement eleLastModDateTimelabel = getDriver().findElementByXPath("//*[text()='Last Modified By']/parent::div/following-sibling::div//span[contains(@class,'OutputText')]/following-sibling::span");
+		System.out.println("Last Modified by = "+eleLastModDateTimelabel.getText());
+		return this;
+		
+	}
+	
 	
 }

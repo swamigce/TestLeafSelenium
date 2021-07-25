@@ -13,6 +13,6 @@ Given print TC1
 Scenario: TC2 for Tags
 Given print TC2
 
-@Regression @Smoke
+@Functional
 Scenario: TC3 for Tags
 Given print TC3

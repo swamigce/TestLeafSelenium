@@ -19,7 +19,7 @@ public class HooksImplementation extends CucumberBase{
 	//public  RemoteWebDriver driver;
 	public String appURL = "https://login.salesforce.com/";
 	
-	@Before
+	//@Before
 	public void preCondition() {
 		
 		WebDriverManager.chromedriver().setup(); 
@@ -35,11 +35,31 @@ public class HooksImplementation extends CucumberBase{
 	}
 	
 	
-	@After
+	//@After
 	public void postCondition() {
 		
 		getDriver().close();
 	}
 	
+	@Before ("@Smoke")
+	public void beforeSmoke() {
+		System.out.println("This will run before Smoke test");
+		
+	}
 
+	@Before ("@Regression")
+	public void beforeRegression() {
+		System.out.println("This will run before Regression test");
+		
+	}
+	@Before ("@Regression")
+	public void beforeRegressions() {
+		System.out.println("This will run before Regression test Additional");
+		
+	}
+	@Before("@Regression and @Smoke")
+	public void beforeRegressionSmoke() {
+		System.out.println("This will run before Regression and Smoke test");
+		
+	}
 }

@@ -4,18 +4,26 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.memory.Memory.GetDOMCountersResponse;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class UtilityWrapperMethods {
+import baseClasses.SeleniumBaseClass;
+
+public class UtilityWrapperMethods extends SeleniumBaseClass{
 	
 
 	public static void eleClick(WebDriver driver, WebElement element) {
@@ -76,6 +84,21 @@ public class UtilityWrapperMethods {
 		
 	}
 	
+public static void takeScreenshot(WebDriver driver, String strPath) throws IOException {
+		
+		TakesScreenshot screenshot = ((TakesScreenshot)driver);
+		File file = screenshot.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file, new File(strPath));
+	}
+	
+//Screenshot without Arguments and Driver
+public static String takeTestStepScreenshot() throws IOException {
+	String timeStamp = DateTimeFormatter.ofPattern("yyyyMMddHHmmss").format(LocalDateTime.now());
+	TakesScreenshot screenshot = ((TakesScreenshot)driver);
+	File file = screenshot.getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(file, new File("./screenshots/Img"+timeStamp+".png"));
+	return timeStamp;
+}
 	
 	/////////////End of Class//////////////
 }

@@ -8,11 +8,93 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">67,880</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">ParallelTest</a></td><td class="num">2</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">3</td><td class="num">345,718</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">cucumberFeatures.TestRunnerAddLocation</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1625924070259</td><td rowspan="1">34450</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ParallelTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">POMTests.NewContactReqTC</td><td><a href="#m0">logoutSFDC</a></td><td rowspan="1">1626547832945</td><td rowspan="1">9</td></tr><tr><th colspan="4">ParallelTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">POMTests.DelectContactrReqTC</td><td><a href="#m1">deleteContactReq</a></td><td rowspan="2">1626547998724</td><td rowspan="2">15577</td></tr><tr class="failedeven"><td><a href="#m2">deleteContactReq</a></td></tr><tr class="failedodd"><td rowspan="1">POMTests.NewContactReqTC</td><td><a href="#m3">testContactReq</a></td><td rowspan="1">1626547718113</td><td rowspan="1">114803</td></tr><tr><th colspan="4">ParallelTest &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">POMTests.NewContactReqTC</td><td><a href="#m4">loginSFDC</a></td><td rowspan="1">1626547832974</td><td rowspan="1">-1626547832974</td></tr><tr class="skippedeven"><td><a href="#m5">logoutSFDC</a></td><td rowspan="1">1626547832999</td><td rowspan="1">-1626547832999</td></tr><tr><th colspan="4">ParallelTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">POMTests.NewContactReqTC</td><td><a href="#m6">testContactReq</a></td><td rowspan="1">1626547832979</td><td rowspan="1">0</td></tr><tr><th colspan="4">ParallelTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">POMTests.DelectContactrReqTC</td><td><a href="#m7">deleteContactReq</a></td><td rowspan="2">1626547858280</td><td rowspan="2">41942</td></tr><tr class="passedeven"><td><a href="#m8">deleteContactReq</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">cucumberFeatures.TestRunnerAddLocation#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;TC_SFDC Add Location with valid Details&quot;</td><td>&quot;Optional[Add Location Functionality]&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ParallelTest</h2><h3 id="m0">POMTests.NewContactReqTC#logoutSFDC</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-BQK0906&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a9918a70a4783c8944e359d95cd9a27e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:468)
+	at baseClasses.SeleniumBaseClass.logoutSFDC(SeleniumBaseClass.java:156)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">POMTests.DelectContactrReqTC#deleteContactReq</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>00000043</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException
+	at utilitypackage.Extentreport.testStepStatus(Extentreport.java:21)
+	at pagesPOM.AppLauncher.ClickContactReq(AppLauncher.java:28)
+	at POMTests.DelectContactrReqTC.deleteContactReq(DelectContactrReqTC.java:27)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">POMTests.DelectContactrReqTC#deleteContactReq</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>00000040</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException
+	at utilitypackage.Extentreport.testStepStatus(Extentreport.java:21)
+	at pagesPOM.ContactRequestDashBoardPage.clickDownIcon(ContactRequestDashBoardPage.java:68)
+	at POMTests.DelectContactrReqTC.deleteContactReq(DelectContactrReqTC.java:28)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">POMTests.NewContactReqTC#testContactReq</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>TestLeafeSwFNN</td><td>TestLeafeSwLN</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-BQK0906&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a9918a70a4783c8944e359d95cd9a27e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:303)
+	at utilitypackage.UtilityWrapperMethods.takeTestStepScreenshot(UtilityWrapperMethods.java:98)
+	at utilitypackage.Extentreport.testStepStatus(Extentreport.java:20)
+	at pagesPOM.ContactRequestDashBoardPage.clickNew(ContactRequestDashBoardPage.java:29)
+	at POMTests.NewContactReqTC.testContactReq(NewContactReqTC.java:25)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">POMTests.NewContactReqTC#loginSFDC</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">POMTests.NewContactReqTC#logoutSFDC</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">POMTests.NewContactReqTC#testContactReq</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>TestLeafeSwFNN1</td><td>TestLeafeSwLN1</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-BQK0906&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a9918a70a4783c8944e359d95cd9a27e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:468)
+	at baseClasses.SeleniumBaseClass.logoutSFDC(SeleniumBaseClass.java:156)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">POMTests.DelectContactrReqTC#deleteContactReq</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>00000041</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">POMTests.DelectContactrReqTC#deleteContactReq</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>00000042</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
